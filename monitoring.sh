@@ -11,4 +11,4 @@ wall  $'#Architecture: '`uname -a` \
       $'\n#Connection TCP: '`netstat -t | grep ESTABLISHED |  wc -l` 'ESTABLISHED' \
       $'\n#User log: '`who | cut -d " " -f1 | sort -u | wc -l` \
       $'\nNetwork: IP '`hostname -I`"("`ip link | awk 'NR==4{ print $2 }'`")" \
-      $'\n#Sudo: '`grep 'sudo' /var/log/sudo/sudo.log | wc -l`' cmd'
+      $'\n#Sudo: '`grep 'COMMAND' /var/log/sudo/sudo.log | wc -l`' cmd'
