@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HOST=$(hostname -f)
-TO="anass.nammal@inelm.com"
+TO="mail@example.com"
 
 # ---- alert thresholds ----
 CPU_LIMIT=85
@@ -21,7 +21,7 @@ flock -n 9 || exit 0
 
 
 
-GPG_KEY_ID="11F9E3B6B003F858"
+GPG_KEY_ID=""
 
 # ---- CPU (accurate) + Per-core ----
 read cpu_user cpu_nice cpu_system cpu_idle cpu_iowait cpu_irq cpu_softirq cpu_steal _ \
